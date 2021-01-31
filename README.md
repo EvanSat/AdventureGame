@@ -4,7 +4,7 @@ We will create a game that takes us through the journey of becoming a developer 
 
 The story will start with finding your to development with hobbies and choices before the college experience, working your way throught free time activities and class choices in college, lasty finding your way in the world and seeing if you success as a CEO in a start up or rethink your life choices in the development world.
 
-With the project utilizing Python our goal is to create a mobile friendly application to test your skills and knowledge. Our timeline is mapped out below for weekly goals and we plan on having chats at least once a week while we are configuting the application. 
+With the project utilizing Python our goal is to create a mobile friendly application to test your skills and knowledge. Our timeline is mapped out below for weekly goals and we plan on having chats at least once a week while we are configuting the application.
 
 # Team Members
 
@@ -12,3 +12,15 @@ With the project utilizing Python our goal is to create a mobile friendly applic
 * Georgy Loriya ([@zhanovich](https://github.com/zhanovich)) - Story Line Creator/Application Design
 * Alison Major ([@amajor](https://github.com/amajor)) - Python Development/Test Case Scenerios
 * Evan Sabado ([@EvanSat](https://github.com/EvanSat) - Python Development
+
+# Setup & Installation
+
+See [docs/setup.md](./docs/setup.md) for setup steps.
+
+# Running Tests
+
+Once you've got the necessary dependencies, you can run the tests by using `pytest` in the root directory.
+
+These tests will automatically run when pushing up a new branch to GitHub.
+
+The `main` branch is protected. Any new changes must be pushed up as a new branch, then approved  by at least one other person on the team, with passing tests.
