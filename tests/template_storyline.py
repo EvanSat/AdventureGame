@@ -48,3 +48,5 @@ if age >= 18:
 #Game Start wrong answer
 else:
     print("You are too young. Keep practicing and come back after highschool.")
+
+    
