@@ -1,7 +1,7 @@
 import os
 import time
 import winsound
-import story
+#import story
 
 os.system("cls")
 
@@ -62,14 +62,14 @@ def title_screen_selection():
         title_screen_selection()
 
 
-def title_screen_sound():
-    sound_file1 = 'PinkPanther30.wav'
-    winsound.PlaySound(sound_file1, winsound.SND_FILENAME)
-
-
-def error_sound():
-    sound_file2 = 'vintage-error-alert-1-2.wav'
-    winsound.PlaySound(sound_file2, winsound.SND_FILENAME)
+# def title_screen_sound():
+#     sound_file1 = 'PinkPanther30.wav'
+#     winsound.PlaySound(sound_file1, winsound.SND_FILENAME)
+#
+#
+# def error_sound():
+#     sound_file2 = 'vintage-error-alert-1-2.wav'
+#     winsound.PlaySound(sound_file2, winsound.SND_FILENAME)
 
 
 def main():
