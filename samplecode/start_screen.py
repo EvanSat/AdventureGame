@@ -27,7 +27,7 @@ def text_color(text):
 
 def title_screen():
     # reads text file
-    f = open("Ascii Game Title - The Great Developer Adventure (3).txt", "r", encoding="utf8")
+    f = open("Ascii Game Title - The Great Developer Adventure.txt", "r", encoding="utf8")
 
     # translates file into string
     game_title = "".join(f.readlines())
