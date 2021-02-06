@@ -42,7 +42,7 @@ def title_screen_selection():
         selection = int(input('Select option above using number: '))
     except ValueError:
         print(text_color("\n[[red]]Please input an integer only [[resetColor]]\n"))
-        error_sound()
+        #error_sound()
         title_screen_selection()
 
     if selection == 1:
@@ -58,7 +58,7 @@ def title_screen_selection():
         os.system("cls")
     else:
         print(text_color('\n[[red]]That\'s not an option! Please pick again [[resetColor]] \n'))
-        error_sound()
+        #error_sound()
         title_screen_selection()
 
 
