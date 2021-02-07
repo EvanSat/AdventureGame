@@ -1,7 +1,7 @@
 import os
 import time
 import winsound
-#import story
+import story
 
 os.system("cls")
 
@@ -48,7 +48,6 @@ def title_screen_selection():
     if selection == 1:
         os.system("cls")
         story.main()
-        # print('GameStarting_TODO')
     elif selection == 2:
         os.system("cls")
         print('GameInfo_TODO')
