@@ -3,7 +3,7 @@
 Setup steps derived from the following:
 
 * [[Video] How to Write Python Tests (Part 1)](https://youtu.be/YC_v-4U94hw)
-* [[Video] How to WRite Python Tests (Part 2)](https://youtu.be/KgZZtA7_iGA)
+* [[Video] How to Write Python Tests (Part 2)](https://youtu.be/KgZZtA7_iGA)
 
 ## Install VirtualEnv
 
@@ -46,7 +46,7 @@ To exit the virtual environment:
 deactivate
 ```
 
-![Image of Venv](./docs/images/venv.png)
+![Image of Venv](./images/venv.png)
 
 ## Install PyTest
 
