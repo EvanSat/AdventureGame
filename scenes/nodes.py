@@ -20,6 +20,13 @@
 #     }
 # ]
 
+# Find a scene node from an array based on the id.
+def get_scene_from_story(scene_array, scene_id):
+    for scene in scene_array:
+        if scene["id"] == scene_id:
+            return scene
+    return None
+
 # Find the text in a story.
 def get_story_text(scene):
     if "text" in scene:

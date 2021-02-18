@@ -36,3 +36,11 @@ sample_scene_array = [
 ])
 def test_get_story_text(scene, result):
     assert get_story_text(scene) == result
+
+@pytest.mark.parametrize('scene_array, scene_id, result', [
+    (sample_scene_array, 'A', sample_scene_array[0]),
+    (sample_scene_array, 'B', sample_scene_array[1]),
+    (sample_scene_array, 'C', sample_scene_array[2])
+])
+def test_get_scene_from_story(scene_array, scene_id, result):
+    assert get_scene_from_story(scene_array, scene_id) == result
