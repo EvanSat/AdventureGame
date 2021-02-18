@@ -6,13 +6,18 @@
 #         "text": "this is the story text",
 #         "point_adjust": 100,
 #         "new_inventory": "Friend Maria",
-#         "links": ["B","C"]
+#         "links": [
+#             {"label":"Option B", "id":"B"},
+#             {"label":"Option C", "id":"C"}
+#         ]
 #     },{
 #         "id": "B",
 #         "text": "story b",
 #         "point_adjust": 10,
 #         "new_inventory": "Understand JavaScript",
-#         "links": ["C"]
+#         "links": [
+#             {"label":"Option C", "id":"C"}
+#         ]
 #     },{
 #         "id": "C",
 #         "text": "story c",
@@ -48,3 +53,9 @@ def get_story_new_inventory(scene):
     else:
         return None
 
+# Get links from scene
+def get_story_links(scene):
+    if "links" in scene:
+        return scene["links"]
+    else:
+        return None

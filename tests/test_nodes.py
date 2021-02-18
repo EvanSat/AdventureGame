@@ -1,4 +1,4 @@
-from scenes.nodes import get_story_text, get_scene_from_story, get_story_point_adjustments, get_story_new_inventory
+from scenes.nodes import get_story_text, get_scene_from_story, get_story_point_adjustments, get_story_new_inventory, get_story_links
 import pytest
 
 sample_scene_node = {
@@ -6,22 +6,30 @@ sample_scene_node = {
     "text": "hello world",
     "point_adjust": 100,
     "new_inventory": "Friend Maria",
-    "links": ["B","C"]
+    "links": [
+        {"label":"Choice 1", "id":"1"},
+        {"label":"Choice 2", "id":"2"}
+    ]
 }
 
 sample_scene_array = [
     {
         "id": "A",
         "text": "this is the story text",
-        "links": ["B","C"]
         "point_adjust": 105,
         "new_inventory": "Friend Ethan",
+        "links": [
+            {"label":"Option B", "id":"B"},
+            {"label":"Option C", "id":"C"}
+        ]
     },{
         "id": "B",
         "text": "story b",
         "point_adjust": 10,
         "new_inventory": "Understand JavaScript",
-        "links": ["C"]
+        "links": [
+            {"label":"Option C", "id":"C"}
+        ]
     },{
         "id": "C",
         "text": "story c",
@@ -62,3 +70,20 @@ def test_get_story_point_adjustments(scene, result):
 ])
 def test_get_story_new_inventory(scene, result):
     assert get_story_new_inventory(scene) == result
+
+@pytest.mark.parametrize('scene, result', [
+    (sample_scene_node, [
+        {"label":"Choice 1", "id":"1"},
+        {"label":"Choice 2", "id":"2"}
+    ]),
+    (sample_scene_array[0], [
+        {"label":"Option B", "id":"B"},
+        {"label":"Option C", "id":"C"}
+    ]),
+    (sample_scene_array[1], [
+        {"label":"Option C", "id":"C"}
+    ]),
+    (sample_scene_array[2], None)
+])
+def test_get_story_links(scene, result):
+    assert get_story_links(scene) == result
