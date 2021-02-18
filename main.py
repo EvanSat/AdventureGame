@@ -1,35 +1,7 @@
 import os
 from scenes.handle import print_scene
 from scenes.nodes import get_scene_from_story, get_story_links
-
-# Sample story. TODO: Store this in a separate file.
-story = [
-    {
-        "id": "A",
-        "text": "this is the story text",
-        "point_adjust": 105,
-        "new_inventory": "Friend Ethan",
-        "links": [
-            {"label":"Option B", "id":"B"},
-            {"label":"Option C", "id":"C"}
-        ]
-    },{
-        "id": "B",
-        "text": "story b",
-        "point_adjust": 10,
-        "new_inventory": "Understand JavaScript",
-        "links": [
-            {"label":"Option C", "id":"C"}
-        ]
-    },{
-        "id": "C",
-        "text": "story c",
-        "point_adjust": 15
-        "links": [
-            {"label":"THE END", "id":"D"}
-        ]
-    }
-]
+from stories.developer_adventure import story
 
 def handle_scene(choice, current_scene):
     if choice == -1:
