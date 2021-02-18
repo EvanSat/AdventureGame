@@ -33,3 +33,18 @@ def get_story_text(scene):
         return scene["text"]
     else:
         return 'Uh oh! The story is missing...'
+
+# Get point adjustments from scene
+def get_story_point_adjustments(scene):
+    if "point_adjust" in scene:
+        return scene["point_adjust"]
+    else:
+        return 0
+
+# Get new inventory from scene
+def get_story_new_inventory(scene):
+    if "new_inventory" in scene:
+        return scene["new_inventory"]
+    else:
+        return None
+

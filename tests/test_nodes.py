@@ -1,4 +1,4 @@
-from scenes.nodes import get_story_text, get_scene_from_story
+from scenes.nodes import get_story_text, get_scene_from_story, get_story_point_adjustments, get_story_new_inventory
 import pytest
 
 sample_scene_node = {
@@ -13,9 +13,9 @@ sample_scene_array = [
     {
         "id": "A",
         "text": "this is the story text",
-        "point_adjust": 100,
-        "new_inventory": "Friend Maria",
         "links": ["B","C"]
+        "point_adjust": 105,
+        "new_inventory": "Friend Ethan",
     },{
         "id": "B",
         "text": "story b",
@@ -44,3 +44,21 @@ def test_get_story_text(scene, result):
 ])
 def test_get_scene_from_story(scene_array, scene_id, result):
     assert get_scene_from_story(scene_array, scene_id) == result
+
+@pytest.mark.parametrize('scene, result', [
+    (sample_scene_node, 100),
+    (sample_scene_array[0], 105),
+    (sample_scene_array[1], 10),
+    (sample_scene_array[2], 15)
+])
+def test_get_story_point_adjustments(scene, result):
+    assert get_story_point_adjustments(scene) == result
+
+@pytest.mark.parametrize('scene, result', [
+    (sample_scene_node, "Friend Maria"),
+    (sample_scene_array[0], "Friend Ethan"),
+    (sample_scene_array[1], "Understand JavaScript"),
+    (sample_scene_array[2], None)
+])
+def test_get_story_new_inventory(scene, result):
+    assert get_story_new_inventory(scene) == result
