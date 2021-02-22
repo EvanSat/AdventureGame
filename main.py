@@ -5,16 +5,21 @@ from stories.developer_adventure import story
 
 def handle_scene(choice, current_scene, previous_scene):
     if choice == -1:
-        # Print start scene
-        # TODO: print the start screen
+        print("SETTING START SCENE")
+        # Set the start scene as current
         current_scene = story[0]
     else:
         choice_index = choice - 1
         options = get_story_links(current_scene)
         option_id = options[choice_index]["id"]
-        current_scene = get_scene_from_story(story, option_id)
-        if current_scene == None:
-            current_scene = previous_scene
+        if option_id == "EXIT":
+            print("\n\nTHANKS FOR PLAYING!\n\n")
+            # Exit the game
+            return False
+        else:
+            current_scene = get_scene_from_story(story, option_id)
+            if current_scene == None:
+                current_scene = previous_scene
 
     # Clear the terminal screen
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -22,7 +27,7 @@ def handle_scene(choice, current_scene, previous_scene):
     # TODO: handle and store new inventory
     # TODO: handle and store point adjustments
 
-    if previous_scene == current_scene:
+    if previous_scene == current_scene and choice != -1:
         print("There was an error fetching next scene. Try again.\n")
 
     print_scene(current_scene)
