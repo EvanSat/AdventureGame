@@ -14,8 +14,8 @@ def handle_scene(choice, current_scene):
         option_id = options[choice_index]["id"]
         current_scene = get_scene_from_story(story, option_id)
 
-    # Clear Screen
-    # os.system("cls") # TODO: This doesn't clear on Mac ("clear")
+    # Clear the terminal screen
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     # TODO: handle and store new inventory
     # TODO: handle and store point adjustments
