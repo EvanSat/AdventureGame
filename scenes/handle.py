@@ -37,5 +37,5 @@ def print_scene(scene):
     print(text_color(text), "\n\n")
     count = 1
     for option in options_list:
-        print("{}. {}".format(count,option["label"]))
+        print(text_color("[[yellow]]{}. {}[[resetColor]]".format(count,option["label"])))
         count += 1

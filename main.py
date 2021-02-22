@@ -1,5 +1,5 @@
 import os
-from scenes.handle import print_scene
+from scenes.handle import print_scene, text_color
 from scenes.nodes import get_scene_from_story, get_story_links
 from stories.developer_adventure import story
 
@@ -28,7 +28,7 @@ def handle_scene(choice, current_scene, previous_scene):
     # TODO: handle and store point adjustments
 
     if previous_scene == current_scene and choice != -1:
-        print("There was an error fetching next scene. Try again.\n")
+        print(text_color("[[red]]There was an error fetching next scene. Try again.\n[[resetColor]]"))
 
     print_scene(current_scene)
 

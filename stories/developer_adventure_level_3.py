@@ -1,7 +1,7 @@
 level_3 = [
     {
         "id": "Level3_Johny",
-        "text": "Time passess by quickly. You found Johny, who you used to\ngo to middle school with. You have not seen him in a couple of years.\nHe moved to A1msterdam with his family. You sent a friend request.\nHe accepted it and you started to chat with Johny.",
+        "text": "[[cyan]]Time passess by quickly. You found Johny, who you used to\ngo to middle school with. You have not seen him in a couple of years.\nHe moved to A1msterdam with his family. You sent a friend request.\nHe accepted it and you started to chat with Johny.[[resetColor]]",
         "new_inventory": "Johny",
         "links": [
             {
@@ -14,7 +14,7 @@ level_3 = [
         ]
     }, {
         "id": "Level3_HouseParty",
-        "text": "You get to the house but don't see anyone you might know.",
+        "text": "[[cyan]]You get to the house but don't see anyone you might know.[[resetColor]]",
         "links": [
             {
                 "label": "You don't want to go inside without knowing anyone. You decide to go home.",
@@ -26,7 +26,7 @@ level_3 = [
         ]
     }, {
         "id": "Level3_Game",
-        "text": "You found a group to play together but that didn't feel good.\nYou decided to go solo and have some nostalgia.\nYou took a trip to talk to Chromie.",
+        "text": "[[cyan]]You found a group to play together but that didn't feel good.\nYou decided to go solo and have some nostalgia.\nYou took a trip to talk to Chromie.[[resetColor]]",
         "links": [
             {
                 "label": "Keep playing through the night.",
