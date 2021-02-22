@@ -5,7 +5,18 @@ level_2 = [
         "point_adjust": 10,
         "new_inventory": "Understand JavaScript",
         "links": [
-            {"label":"Option C", "id":"Level3_SceneA"}
+            {
+                "label": "Johny",
+                "id": "Level3_Johny"
+            },
+            {
+                "label": "House party!",
+                "id": "Level3_HouseParty"
+            },
+            {
+                "label": "Play game",
+                "id": "Level3_Game"
+            }
         ]
     }
 ]
