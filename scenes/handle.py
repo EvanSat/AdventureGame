@@ -1,8 +1,21 @@
-from scenes.nodes import get_story_text, get_story_links
+from scenes.nodes import get_story_file, get_story_text, get_story_links
 
 # Print the scene and options.
 def print_scene(scene):
-    text = get_story_text(scene)
+    # Check for a file!
+    file = get_story_file(scene)
+
+    if file != None:
+        # Open the file
+        f = open(file, "r", encoding="utf8")
+
+        # translates file into string
+        text = "".join(f.readlines())
+
+        # print(text_color(game_title))
+    else:
+        text = get_story_text(scene)
+
     options_list = get_story_links(scene)
 
     print(text, "\n\n")

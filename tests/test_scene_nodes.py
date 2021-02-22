@@ -1,4 +1,4 @@
-from scenes.nodes import get_story_text, get_scene_from_story, get_story_point_adjustments, get_story_new_inventory, get_story_links
+from scenes.nodes import get_story_text, get_scene_from_story, get_story_point_adjustments, get_story_new_inventory, get_story_links, get_story_file
 import pytest
 
 sample_scene_node = {
@@ -6,6 +6,15 @@ sample_scene_node = {
     "text": "hello world",
     "point_adjust": 100,
     "new_inventory": "Friend Maria",
+    "links": [
+        {"label":"Choice 1", "id":"1"},
+        {"label":"Choice 2", "id":"2"}
+    ]
+}
+
+sample_scene_from_file = {
+    "id": "single_node",
+    "file": "test_sample.txt",
     "links": [
         {"label":"Choice 1", "id":"1"},
         {"label":"Choice 2", "id":"2"}
@@ -36,6 +45,13 @@ sample_scene_array = [
         "point_adjust": 15
     }
 ]
+
+@pytest.mark.parametrize('scene, result', [
+    (sample_scene_node, None),
+    (sample_scene_from_file, "test_sample.txt")
+])
+def test_get_story_file(scene, result):
+    assert get_story_file(scene) == result
 
 @pytest.mark.parametrize('scene, result', [
     (sample_scene_node, 'hello world'),

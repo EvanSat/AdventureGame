@@ -32,6 +32,13 @@ def get_scene_from_story(scene_array, scene_id):
             return scene
     return None
 
+# Find the file in a story.
+def get_story_file(scene):
+    if "file" in scene:
+        return scene["file"]
+    else:
+        return None
+
 # Find the text in a story.
 def get_story_text(scene):
     if "text" in scene:
