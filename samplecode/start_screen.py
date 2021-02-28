@@ -1,6 +1,6 @@
 import os
 import time
-import winsound
+# import winsound
 import story
 
 os.system("cls")
