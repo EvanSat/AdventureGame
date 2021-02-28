@@ -20,6 +20,7 @@ level_2 = [
         "text": "[[cyan]]Wow, amazing game! Scavanger hunting around Pandaria was fun. You had a blast, but your \n"
                 "team is going to sleep. Luckily, you met Kevin. He seems to be a normal guy. You learn that he is \n"
                 "a high school drop out and is between gigs now. What are you going to do now?[[resetColor]]",
+        "new_inventory": "Friend Kevin",
         "links": [
             {
                 "label": "Close the game, as you are not in the mood to make new friends now",

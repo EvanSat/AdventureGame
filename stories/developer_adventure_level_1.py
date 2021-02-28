@@ -10,7 +10,7 @@ level_1 = [
                 "an early night and it's getting boring. What do you want to do? "
                 "[[resetColor]]",
         #"point_adjust": 105,
-        #"new_inventory": "Friend Ethan",
+        "new_inventory": "Friend Katie",
         "links": [
             {
                 "label": "Prepare for tomorrow's literature test",

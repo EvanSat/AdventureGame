@@ -1,9 +1,9 @@
 import os
 from scenes.handle import print_scene, text_color
-from scenes.nodes import get_scene_from_story, get_story_links
+from scenes.nodes import get_scene_from_story, get_story_links, get_story_new_inventory
 from stories.developer_adventure import story
 
-def handle_scene(choice, current_scene, previous_scene):
+def handle_scene(choice, current_scene, previous_scene, inventory):
     if choice == -1:
         print("SETTING START SCENE")
         # Set the start scene as current
@@ -24,7 +24,11 @@ def handle_scene(choice, current_scene, previous_scene):
     # Clear the terminal screen
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    # TODO: handle and store new inventory
+    # Handle and store new inventory
+    new_inventory_string = get_story_new_inventory(current_scene)
+    if isinstance(new_inventory_string, str):
+        inventory = inventory + [new_inventory_string]
+
     # TODO: handle and store point adjustments
 
     if previous_scene == current_scene and choice != -1:
@@ -38,11 +42,12 @@ def handle_scene(choice, current_scene, previous_scene):
         pass
 
     previous_scene = current_scene
-    handle_scene(selection, current_scene, previous_scene)
+    handle_scene(selection, current_scene, previous_scene, inventory)
 
 
 def main():
-    handle_scene(-1, story[0], story[0])
+    inventory = []
+    handle_scene(-1, story[0], story[0], inventory)
 
 if __name__ == '__main__':
     main()
