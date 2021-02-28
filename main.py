@@ -1,9 +1,9 @@
 import os
 from scenes.handle import print_scene, text_color
-from scenes.nodes import get_scene_from_story, get_story_links, get_story_new_inventory
+from scenes.nodes import get_scene_from_story, get_story_links, get_story_new_inventory, get_story_point_adjustments
 from stories.developer_adventure import story
 
-def handle_scene(choice, current_scene, previous_scene, inventory):
+def handle_scene(choice, current_scene, previous_scene, inventory, total_points):
     if choice == -1:
         print("SETTING START SCENE")
         # Set the start scene as current
@@ -29,7 +29,10 @@ def handle_scene(choice, current_scene, previous_scene, inventory):
     if isinstance(new_inventory_string, str):
         inventory = inventory + [new_inventory_string]
 
-    # TODO: handle and store point adjustments
+    # Handle and store point adjustments
+    new_point_adjustment = get_story_point_adjustments(current_scene)
+    if isinstance(new_point_adjustment, int):
+        total_points = total_points + new_point_adjustment
 
     if previous_scene == current_scene and choice != -1:
         print(text_color("[[red]]There was an error fetching next scene. Try again.\n[[resetColor]]"))
@@ -42,12 +45,13 @@ def handle_scene(choice, current_scene, previous_scene, inventory):
         pass
 
     previous_scene = current_scene
-    handle_scene(selection, current_scene, previous_scene, inventory)
+    handle_scene(selection, current_scene, previous_scene, inventory, total_points)
 
 
 def main():
+    total_points = 0
     inventory = []
-    handle_scene(-1, story[0], story[0], inventory)
+    handle_scene(-1, story[0], story[0], inventory, total_points)
 
 if __name__ == '__main__':
     main()

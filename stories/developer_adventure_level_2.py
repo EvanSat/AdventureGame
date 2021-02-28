@@ -3,6 +3,7 @@ level_2 = [
         "id": "Level2_SceneA",
         "text": "[[cyan]]You got a message from Katie. She is inviting you to the party. You do not know the host, \n"
                 "but at least you know Katie. What are your thoughts? [[resetColor]]",
+        "point_adjust": 10,
         "links": [
             {
                 "label": "Decline the invite, say that you are too busy studying for the literature test",
@@ -21,6 +22,7 @@ level_2 = [
                 "team is going to sleep. Luckily, you met Kevin. He seems to be a normal guy. You learn that he is \n"
                 "a high school drop out and is between gigs now. What are you going to do now?[[resetColor]]",
         "new_inventory": "Friend Kevin",
+        "point_adjust": 5,
         "links": [
             {
                 "label": "Close the game, as you are not in the mood to make new friends now",

@@ -9,7 +9,7 @@ level_1 = [
                 "test tomorrow. You have the basic knowledge and you are prepared as any other student in class. It's\n"
                 "an early night and it's getting boring. What do you want to do? "
                 "[[resetColor]]",
-        #"point_adjust": 105,
+        "point_adjust": 10,
         "new_inventory": "Friend Katie",
         "links": [
             {
