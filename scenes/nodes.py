@@ -85,4 +85,9 @@ def get_story_links(scene, user_inventory=[]):
         # Return limited scenes that match requirements
         return limited_scenes
     else:
-        return None
+        return [
+            {
+                "label": "Back to Start Menu",
+                "id": "START"
+            }
+        ]

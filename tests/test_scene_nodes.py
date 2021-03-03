@@ -1,6 +1,13 @@
 from scenes.nodes import get_story_text, get_scene_from_story, get_story_point_adjustments, get_story_new_inventory, get_story_links, get_story_file
 import pytest
 
+start_link = [
+            {
+                "label": "Back to Start Menu",
+                "id": "START"
+            }
+        ]
+
 sample_scene_node = {
     "id": "single_node",
     "text": "hello world",
@@ -99,7 +106,7 @@ def test_get_story_new_inventory(scene, result):
     (sample_scene_array[1], [
         {"label":"Option C", "id":"C"}
     ]),
-    (sample_scene_array[2], None)
+    (sample_scene_array[2], start_link)
 ])
 def test_get_story_links(scene, result):
     assert get_story_links(scene) == result
