@@ -62,7 +62,26 @@ def get_story_new_inventory(scene):
 
 # Get links from scene
 def get_story_links(scene, user_inventory=[]):
+    limited_scenes = []
     if "links" in scene:
-        return scene["links"]
+        
+        # Check for requirements in any links
+        for link in scene["links"]:
+
+            # If there's a requirement for the scene, 
+            # check if user meets the requirement
+            if "requirements" in link:
+
+                # Iterate through requirements
+                for requirement in link["requirements"]:
+                    if requirement in user_inventory:
+                        limited_scenes.append(link)
+            
+            # If there's no requirement, give it as an option.
+            else:
+                limited_scenes.append(link)
+
+        # Return limited scenes that match requirements
+        return limited_scenes
     else:
         return None

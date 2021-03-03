@@ -9,13 +9,19 @@ link1 = {
 link2 = {
             "label":"Choice 2", 
             "id":"2",
-            "requirements":"sword"
+            "requirements":["sword"]
         }
 
 link3 = {
             "label":"Choice 3",
             "id":"3",
-            "requirements":"John"
+            "requirements":["Friend John"]
+        }
+
+link4 = {
+            "label":"Choice 4", 
+            "id":"4",
+            "requirements":["sword","Friend John"]
         }
 
 sample_scene_node = {
@@ -23,21 +29,23 @@ sample_scene_node = {
     "text": "hello world",
     "point_adjust": 100,
     "new_inventory": "Friend Maria",
-    "links": [link1,link2,link3]
+    "links": [link1,link2,link3,link4]
 }
-
-user_inventory = ["Friend John"]
 
 @pytest.mark.parametrize('scene, user_inventory, result', [
     (
+        sample_scene_node, 
+        ["Friend John"],
+        [link1, link3, link4]
+    ),(
     #     sample_scene_node, 
-    #     ["Friend John"],
-    #     [link1, link3]
+    #     ["Friend John","sword"],
+    #     [link1, link2, link3, link4]
     # ),(
         sample_scene_node, 
-        ["Friend John","Great Sword"],
-        [link1, link2, link3]
+        ["sword"],
+        [link1, link2, link4]
     )
 ])
-def test_get_story_links(scene, user_inventory, result):
-    assert get_story_links(scene) == result
+def test_get_story_links_with_exact_requirements(scene, user_inventory, result):
+    assert get_story_links(scene, user_inventory) == result
