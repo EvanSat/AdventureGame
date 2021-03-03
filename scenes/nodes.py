@@ -76,6 +76,7 @@ def get_story_links(scene, user_inventory=[]):
                 for requirement in link["requirements"]:
                     if requirement in user_inventory:
                         limited_scenes.append(link)
+                        break
             
             # If there's no requirement, give it as an option.
             else:

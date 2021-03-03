@@ -38,10 +38,10 @@ sample_scene_node = {
         ["Friend John"],
         [link1, link3, link4]
     ),(
-    #     sample_scene_node, 
-    #     ["Friend John","sword"],
-    #     [link1, link2, link3, link4]
-    # ),(
+        sample_scene_node, 
+        ["Friend John","sword"],
+        [link1, link2, link3, link4]
+    ),(
         sample_scene_node, 
         ["sword"],
         [link1, link2, link4]
