@@ -6,6 +6,7 @@ level_4 = [
                 "Jeremy. He is a very cool dude, even though he stayed in the same grade twice. It's almost 4 am, \n"
                 "people are starting to leave. What's your plan?"
                 "[[resetColor]]",
+        "new_inventory": "Friend Jeremy",
         "links": [
             {
                 "label": "Go home, it's getting too late",
