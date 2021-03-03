@@ -7,7 +7,7 @@
 #         "point_adjust": 100,
 #         "new_inventory": "Friend Maria",
 #         "links": [
-#             {"label":"Option B", "id":"B"},
+#             {"label":"Option B", "id":"B", "requirements":"Maria"},
 #             {"label":"Option C", "id":"C"}
 #         ]
 #     },{
@@ -61,7 +61,7 @@ def get_story_new_inventory(scene):
         return None
 
 # Get links from scene
-def get_story_links(scene):
+def get_story_links(scene, user_inventory=[]):
     if "links" in scene:
         return scene["links"]
     else:
