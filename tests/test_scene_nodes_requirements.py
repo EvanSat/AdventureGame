@@ -45,6 +45,14 @@ sample_scene_node = {
         sample_scene_node, 
         ["sword"],
         [link1, link2, link4]
+    ),(
+        sample_scene_node, 
+        ["Friend Maria"],
+        [link1]
+    ),(
+        sample_scene_node, 
+        [],
+        [link1]
     )
 ])
 def test_get_story_links_with_exact_requirements(scene, user_inventory, result):
