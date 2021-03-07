@@ -6,6 +6,7 @@ level_3 = [
                 "tech-savvy and based on his profile information he has won multiple STEM awards in his school. \n"
                 "You sent a friend request. He accepted it and you started to chat with Johny. Remember: you have a \n"
                 "test tomorrow. What are you going to do?[[resetColor]]",
+        "new_inventory": "Friend Johny",
         "links": [
             {
                 "label": "Say you have a test tomorrow and probably will catch up later",

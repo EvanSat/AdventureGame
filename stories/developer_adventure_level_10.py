@@ -10,26 +10,40 @@ level_10 = [
                 "[[resetColor]]",
         "links": [
             {
-                "label": "Study, of course",
-                "id": "Level10_SceneA"
+                "label": "What's next?",
+                "id": "Level11_SceneA",
+                "requirements": ["Friend Johny"]
             }, {
-                "label": "Party like never before",
-                "id": "Level10_SceneB"
+                "label": "What's next?",
+                "id": "Level11_SceneB"
+                # Either BOTH friends or NEITHER friend...
+                # "requirements": ["Friend Johny","Friend Kevin"]
+            }, {
+                "label": "What's next?",
+                "id": "Level11_SceneC",
+                "requirements": ["Friend Kevin"]
             }
         ]
     }, {
         "id": "Level10_SceneB",
         "text": "[[cyan]]"
-                "YIt's always Friday at your place. What an impressive four years of school. You could definitely \n"
+                "It's always Friday at your place. What an impressive four years of school. You could definitely \n"
                 "use what you have learned about CS in your bright future."
                 "[[resetColor]]",
         "links": [
             {
-                "label": "Make friends and chill",
-                "id": "Level10_SceneB"
+                "label": "What's next?",
+                "id": "Level11_SceneB",
+                "requirements": ["Friend Johny"]
             }, {
                 "label": "Earn money, money, money",
-                "id": "Level10_SceneC"
+                "id": "Level11_SceneC"
+                # Either BOTH friends or NEITHER friend...
+                # "requirements": ["Friend Johny","Friend Kevin"]
+            }, {
+                "label": "What's next?",
+                "id": "Level11_SceneE",
+                "requirements": ["Friend Kevin"]
             }
         ]
     }, {
@@ -41,11 +55,18 @@ level_10 = [
                 "[[resetColor]]",
         "links": [
             {
-                "label": "Forget about my studies",
-                "id": "Level10_SceneB"
+                "label": "What's next?",
+                "id": "Level11_SceneD",
+                "requirements": ["Friend Johny"]
             }, {
-                "label": "Start working and getting on my feet",
-                "id": "Level10_SceneC"
+                "label": "What's next?",
+                "id": "Level11_SceneF",
+                "requirements": ["Friend Kevin"]
+            }, {
+                "label": "What's next?",
+                "id": "Level11_SceneE"
+                # Either BOTH friends or NEITHER friend...
+                # "requirements": ["Friend Johny","Friend Kevin"]
             }
         ]
     }

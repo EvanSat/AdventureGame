@@ -10,7 +10,7 @@ def handle_scene(choice, current_scene, previous_scene, inventory, total_points)
         current_scene = story[0]
     else:
         choice_index = choice - 1
-        options = get_story_links(current_scene)
+        options = get_story_links(current_scene, inventory)
         option_id = options[choice_index]["id"]
         if option_id == "EXIT":
             print("\n\nTHANKS FOR PLAYING!\n\n")

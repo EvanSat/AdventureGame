@@ -8,6 +8,7 @@ level_9 = [
                 "about IT security and its importance. Interesting topic. Finish the sentence: during my last year \n"
                 "of college I want to ..."
                 "[[resetColor]]",
+        "new_inventory": "IT Helpdesk Job Experience",
         "links": [
             {
                 "label": "Study, of course",
@@ -25,6 +26,7 @@ level_9 = [
                 "not) to get money using your knowledge of computer science. You hear things like \"dark web\". \n"
                 "Finish the sentence: next year I want to ..."
                 "[[resetColor]]",
+        "new_inventory": "Pizza Job Experience",
         "links": [
             {
                 "label": "Make friends and chill",
@@ -43,6 +45,7 @@ level_9 = [
                 "place where you are learning good and bad things you can do in IT. Finish the sentence: during \n"
                 "my last year of college I want to ..."
                 "[[resetColor]]",
+        "new_inventory": "RadioShack Job Experience",
         "links": [
             {
                 "label": "Forget about my studies",
@@ -60,6 +63,7 @@ level_9 = [
                 "experience. You get to create new applications and think about security. Finish the sentence: \n"
                 "during my last year of college I want to ..."
                 "[[resetColor]]",
+        "new_inventory": "Research Assistant Job Experience",
         "links": [
             {
                 "label": "Finish the school like a champ",
